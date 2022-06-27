@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const ClienteController = require('controllers/ClienteController')
+const ClienteController = require('../controllers/ClienteController')
 
 router.post('/add', ClienteController.createclienteSave)
 router.post('/remove', ClienteController.removecliente)
