@@ -5,6 +5,8 @@ const app = express()
 
 const conn = require('./db/conn')
 
+// const cors = require("cors")
+
 // const produto = require('./models/produto')
 
 const clienteRoutes = require('./routes/clientesRoutes')

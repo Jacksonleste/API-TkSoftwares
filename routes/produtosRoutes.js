@@ -3,6 +3,7 @@ const router = express.Router()
 const produtoController = require('../controllers/produtoController')
 
 router.get('/search', produtoController.pesquisa)
+router.get('/product/:id', produtoController.getproduct)
 
 router.post('/add', produtoController.createprodutoSave)
 router.post('/remove', produtoController.removeproduto)

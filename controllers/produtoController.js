@@ -92,4 +92,22 @@ module.exports = class produtoController {
     .catch((err) => console.log(err))
   }
 
+  static getproduct(req, res) {
+    const id = req.params.id
+    const { Op } = require("sequelize");
+
+    
+    Produto.findOne({where:{id: id}, raw: true })
+    .then((data) => {
+      let emptyprodutos = false
+
+      if (data.length === 0) {
+        emptyprodutos = true
+      }
+
+      res.json(data)
+    })
+    .catch((err) => console.log(err))
+  }
+
 }
