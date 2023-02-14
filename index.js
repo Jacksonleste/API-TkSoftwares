@@ -7,7 +7,7 @@ const conn = require('./db/conn')
 
 // const cors = require("cors")
 
-// const produto = require('./models/produto')
+const produto = require('./models/produto')
 
 const clienteRoutes = require('./routes/clientesRoutes')
 const produtoRoutes = require('./routes/produtosRoutes')
