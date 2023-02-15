@@ -3,8 +3,7 @@ const Produto = require('../models/produto')
 module.exports = class produtoController {
   
   static createprodutoSave(req, res) {
-
-    req.body.forEach((data)=>{
+      const data = req.body;
       const produto = {
         nome: data.nome,
         preco: data.preco,
@@ -17,9 +16,8 @@ module.exports = class produtoController {
       }
 
       Produto.create(produto)
-      .then(res.send())
+      .then(res.send( res.json(data)))
       .catch((err) => console.log(err))
-    })
   }
 
   static showprodutos(req, res) {
